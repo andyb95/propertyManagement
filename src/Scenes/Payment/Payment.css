@@ -1,0 +1,23 @@
+.paymentBlock {
+    height: 300px;
+    width: 90%;
+    background-color: #F0F0F0;
+    box-shadow: 2px 2px 2px 2px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.paymentOptionButton {
+    width: 100%;
+    height: 35px;
+    background-color: white;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.paymentLinkText {
+    text-decoration: none;
+}
