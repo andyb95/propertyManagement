@@ -11,10 +11,11 @@ const Home = () => {
             [e.target.id]: e.target.value
         })
     }
+
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(loginFormData)
     }
+
     return (
         <div>WELCOME Home
             <form onSubmit={handleSubmit}>
@@ -36,7 +37,7 @@ const Home = () => {
 
                 <div>
                     <a href="/register">Sign Up</a>
-                    <button>Sign In</button>
+                    <button onClick={handleSubmit}>Sign In</button>
                 </div>
             </form>
         </div>

@@ -33,6 +33,20 @@ const Menu = () => {
             landlordOption: false
         },
         {
+            key: "listProperty",
+            label: "List a Property",
+            route: '/listProperty',
+            tenantOption: true,
+            landlordOption: true
+        },
+        {
+            key: "properties",
+            label: "Search",
+            route: '/properties',
+            tenantOption: true,
+            landlordOption: true
+        },
+        {
             key: "logout",
             label: "Logout",
             route: '/',

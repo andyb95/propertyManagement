@@ -9,6 +9,8 @@ import Request from './Scenes/Request';
 import Documents from './Scenes/Documents';
 import AutoDraft from './Scenes/Payment/AutoDraft';
 import OneTimePayment from './Scenes/Payment/OneTimePayment';
+import ListProperty from './Scenes/Property/ListProperty';
+import Properties from './Scenes/Property/Properties'
 
 export default (
     <Routes>
@@ -21,5 +23,7 @@ export default (
         <Route path="/documents" element={<Documents/>}/>
         <Route path="/autoDraft" element={<AutoDraft/>}/>
         <Route path="/oneTimePayment" element={<OneTimePayment/>}/>
+        <Route path="/listProperty" element={<ListProperty/>}/>
+        <Route path="/properties" element={<Properties/>}/>
     </Routes>
 );

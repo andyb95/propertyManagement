@@ -55,7 +55,7 @@ const Request = () => {
                         className="requestTextInput"
                         onChange={handleChange}
                     >
-                        {properties.map(property=>{
+                        {properties.map(property => {
                             return <option key={property.key} value={property.address}>{property.address}</option>
                         })}
                     </select>
