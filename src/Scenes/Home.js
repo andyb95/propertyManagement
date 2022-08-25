@@ -10,6 +10,7 @@ const Home = () => {
         setLoginFormData({...loginFormData,
             [e.target.id]: e.target.value
         })
+        console.log(loginFormData)
     }
     const handleSubmit = e => {
         e.preventDefault()
@@ -36,7 +37,7 @@ const Home = () => {
 
                 <div>
                     <a href="/register">Sign Up</a>
-                    <button>Sign In</button>
+                    <button onClick={handleSubmit}>Sign In</button>
                 </div>
             </form>
         </div>

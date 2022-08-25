@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const session = require('express-session')
+const session = require('express-session');
 require("dotenv").config({ path: "./config.env" });
 const port = process.env.PORT;
 const db = require("./db/conn");
@@ -17,7 +17,7 @@ app.use(
 )
 
 app.use(require("./routes/user"));
-// app.use(require("./routes/property"));
+app.use(require("./routes/property"));
 app.use(require("./routes/message"));
 // app.use(require("./routes/document"));
 
