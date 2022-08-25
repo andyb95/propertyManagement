@@ -10,12 +10,12 @@ const Home = () => {
         setLoginFormData({...loginFormData,
             [e.target.id]: e.target.value
         })
-        console.log(loginFormData)
     }
+
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(loginFormData)
     }
+
     return (
         <div>WELCOME Home
             <form onSubmit={handleSubmit}>

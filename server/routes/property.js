@@ -73,9 +73,6 @@ propertyRoutes.route("/property/getProperties").get((req, response) => {
         if (err) throw err;
         response.json(res)
     })
-    // const properties = db_connect.collection("properties").find();
-    // console.log(properties)
-    // response.json(properties);
 })
 
 module.exports = propertyRoutes;

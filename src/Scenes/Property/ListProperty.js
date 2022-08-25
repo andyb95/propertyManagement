@@ -1,4 +1,3 @@
-// import React, { useState } from 'react';
 import React from 'react';
 import axios from 'axios';
 import '../../App.css';
@@ -6,47 +5,15 @@ const FormData = require('form-data');
 
 const ListProperty = () => {
     const propertyFormData = new FormData();
-    // const [propertyFormData, setPropertyFormData] = useState({
-    //     address1: '',
-    //     address2: '',
-    //     city: '',
-    //     state: '',
-    //     zip: '',
-    //     images: [],
-    //     price: '',
-    //     description: ''
-    // })
-    // const [image, setImage] = useState(null)
 
     const handleChange = async e => {
         if (e.target.id === 'image') {
             propertyFormData.append('propertyImage', e.target.files[0], e.target.files[0].name)
-            // const file = await fs.readFile(e.target.files[0].name);
-            // propertyFormData.append(e.target.id, e.target.files[0]);
-            // const encodedString = Buffer.from(e.target.files[0]).toString('base64');
-            // propertyFormData.images.push(e.target.files[0])
-            // setImage(e.target.files[0])
         }
         else {
             propertyFormData.append(e.target.id, e.target.value);
-            // setPropertyFormData({...propertyFormData,
-            //     [e.target.id]: e.target.value
-            // })
         }
-        // console.log(image)
-        // if (e.target.files) {   
-        //     console.log(e.target.files[0])
-        // }
-        // console.log(propertyFormData.get(e.target.id))
     }
-
-    // const handleImage = e => {
-    //     console.log(e.target.id)
-    //     console.log(e.target.files[0])
-    //     // const files = {'file': (e.target.value, open(e.target.value, 'rb'), 'image/jpeg')}
-    //     propertyFormData.images.push(e.target.files[0])
-    //     console.log(propertyFormData.images)
-    // }
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -60,13 +27,6 @@ const ListProperty = () => {
         } catch(error) {
             console.log(error)
         }
-
-        // axios.post('http://localhost:3100/property/listProperty', data)
-        //     .then(res => {
-        //         console.log('Property listed', res)
-        //     }).catch(err => {
-        //         alert(`Failed to list property, ${err}`)
-        //     })
     }
 
     return (
@@ -199,7 +159,6 @@ const ListProperty = () => {
                         type="file"
                         id="image"
                         onChange={handleChange}
-                        // onChange={handleImage}
                     />
                 </label>
                 
